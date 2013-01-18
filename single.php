@@ -9,27 +9,29 @@
  * @since 		Starkers 4.0
  */
 ?>
-<div class="container">
-	<?php Starkers_Utilities::get_template_parts( array( 'parts/shared/html-header', 'parts/shared/header' ) ); ?>
+<?php Starkers_Utilities::get_template_parts( array( 'parts/shared/html-header' ) ); ?>
+	<div class="container">
+		<?php Starkers_Utilities::get_template_parts( array( 'parts/shared/header' ) ); ?>
 
-	<?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
+		<?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
 
-	<article>
+		<article>
 
-		<h2><?php the_title(); ?></h2>
-		<time datetime="<?php the_time( 'Y-m-d' ); ?>" pubdate><?php the_date(); ?> <?php the_time(); ?></time> <?php comments_popup_link('Leave a Comment', '1 Comment', '% Comments'); ?>
-		<?php the_content(); ?>
+			<h2><?php the_title(); ?></h2>
+			<time datetime="<?php the_time( 'Y-m-d' ); ?>" pubdate><?php the_date(); ?> <?php the_time(); ?></time> <?php comments_popup_link('Leave a Comment', '1 Comment', '% Comments'); ?>
+			<?php the_content(); ?>
 
-		<?php if ( get_the_author_meta( 'description' ) ) : ?>
-		<?php echo get_avatar( get_the_author_meta( 'user_email' ) ); ?>
-		<h3>About <?php echo get_the_author() ; ?></h3>
-		<?php the_author_meta( 'description' ); ?>
-		<?php endif; ?>
+			<?php if ( get_the_author_meta( 'description' ) ) : ?>
+			<?php echo get_avatar( get_the_author_meta( 'user_email' ) ); ?>
+			<h3>About <?php echo get_the_author() ; ?></h3>
+			<?php the_author_meta( 'description' ); ?>
+			<?php endif; ?>
 
-		<?php comments_template( '', true ); ?>
+			<?php comments_template( '', true ); ?>
 
-	</article>
-	<?php endwhile; ?>
+		</article>
+		<?php endwhile; ?>
 
-	<?php Starkers_Utilities::get_template_parts( array( 'parts/shared/footer','parts/shared/html-footer' ) ); ?>
-</div>
+		<?php Starkers_Utilities::get_template_parts( array( 'parts/shared/footer' ) ); ?>
+	</div>
+<?php Starkers_Utilities::get_template_parts( array( 'parts/shared/html-footer' ) ); ?>

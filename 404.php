@@ -9,10 +9,12 @@
  * @since 		Starkers 4.0
  */
 ?>
-<div class="container">
-	<?php Starkers_Utilities::get_template_parts( array( 'parts/shared/html-header', 'parts/shared/header' ) ); ?>
+<?php Starkers_Utilities::get_template_parts( array( 'parts/shared/html-header' ) ); ?>
+	<div class="container">
+		<?php Starkers_Utilities::get_template_parts( array( 'parts/shared/header' ) ); ?>
 
-	<h2>Page not found</h2>
+		<h2>Page not found</h2>
 
-	<?php Starkers_Utilities::get_template_parts( array( 'parts/shared/footer','parts/shared/html-footer' ) ); ?>
-</div>
+		<?php Starkers_Utilities::get_template_parts( array( 'parts/shared/footer' ) ); ?>
+	</div>
+<?php Starkers_Utilities::get_template_parts( array( 'parts/shared/html-footer' ) ); ?>
