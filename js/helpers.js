@@ -13,6 +13,8 @@ if ( !Array.prototype.remove ) {
 }
 
 // Complete cookie reader/writer from https://developer.mozilla.org/en-US/docs/DOM/document.cookie
+var TMW = window.TMW || {};
+
 TMW.cookies = {
 	getItem: function(sKey) {
 		if (!sKey || !this.hasItem(sKey)) { return null; }

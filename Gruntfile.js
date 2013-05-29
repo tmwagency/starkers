@@ -21,7 +21,7 @@ module.exports = function (grunt) {
 		jshint: {
 			all: [
 				'Gruntfile.js',
-				'js/**/*.js'
+				'js/*.js'
 			],
 			options: {
 				jshintrc: '.jshintrc'
@@ -55,8 +55,6 @@ module.exports = function (grunt) {
 
 		uglify: {
 			options: {
-				message: 'We are now ugly',
-
 				// mangle: Turn on or off mangling
 				mangle: true,
 
@@ -64,7 +62,7 @@ module.exports = function (grunt) {
 				beautify: false,
 
 				// report: Show file size report
-				report: 'gzip',
+				//report: 'gzip',
 
 				// sourceMap: @string. The location of the source map, relative to the project
 				sourceMap: jsFile + '.map',
