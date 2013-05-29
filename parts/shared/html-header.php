@@ -11,7 +11,12 @@
 
 		<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 
-		<link rel="stylesheet"  href="<?php bloginfo('stylesheet_directory'); ?>/css/kickoff.css" />
+		<!--[if lte IE 8]>
+                        <link rel="stylesheet"  href="<?php bloginfo('stylesheet_directory'); ?>/css/kickoff-old-ie.css" />
+		<![endif]-->
+		<!--[if gt IE 8]><!-->
+			<link rel="stylesheet"  href="<?php bloginfo('stylesheet_directory'); ?>/css/kickoff.css" />
+		<!--<![endif]-->	
 
 		<link rel="shortcut icon" href="<?php echo get_stylesheet_directory_uri(); ?>/img/favicon.ico"/>
 
